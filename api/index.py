@@ -1,7 +1,7 @@
 import os
 # DEV ONLY: allow http://localhost for OAuth during local development (remove in production)
-os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
-
+if os.getenv("VERCEL_ENV") != "production":
+    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 import re
 import smtplib
 import json
@@ -45,7 +45,7 @@ CLIENT_CONFIG = {
             "token_uri": os.getenv("TOKEN_URI"),
             "auth_provider_x509_cert_url": os.getenv("AUTH_PROVIDER_CERT_URL"),
             "client_secret": os.getenv("CLIENT_SECRET"),
-            "redirect_uris": os.getenv("REDIRECT_URI")
+            # "redirect_uris": os.getenv("REDIRECT_URI")
     }
 }
 
