@@ -501,7 +501,7 @@ const app = document.getElementById('app');
                     navigateTo('gmail');
                 }
             } else if (flowType === 'upload') {
-                fetchUrl = '/upload_resume';
+                fetchUrl = '/api/upload_resume';
                 const formData = new FormData();
                 const jobDescription = localStorage.getItem('jobDescription');
                 formData.append('resume', data.file);

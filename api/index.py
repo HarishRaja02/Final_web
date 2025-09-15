@@ -555,7 +555,7 @@ def fetch_resumes():
 
     return jsonify({"candidates": candidates})
 
-@app.route("/upload_resume", methods=["POST"])
+@app.route("/api/upload_resume", methods=["POST"])
 def upload_resume():
     """Handles the manual resume upload, processing, and analysis."""
     if 'resume' not in request.files:
