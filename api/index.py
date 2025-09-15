@@ -50,7 +50,7 @@ CLIENT_CONFIG = {
 }
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-TEMPORARY_FOLDER = "temp_resumes"
+TEMPORARY_FOLDER = "/tmp"
 SMTP_SERVER = os.getenv("SMTP_SERVER")
 SMTP_PORT = os.getenv("SMTP_PORT")
 EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
