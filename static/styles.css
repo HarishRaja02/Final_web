@@ -1,0 +1,466 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-orange: #FF6600;
+            --primary-orange-dark: #E65C00;
+            --black: #1A1A1A;
+            --white: #FFFFFF;
+            --gray-light: #F3F4F6;
+            --gray-medium: #6B7280;
+            --gray-dark: #4B5563;
+        }
+
+        /* Light Theme */
+        .light-theme {
+            background-color: var(--white);
+            color: var(--black);
+        }
+        .light-theme .bg-card {
+            background-color: var(--gray-light);
+        }
+        .light-theme .text-heading {
+            color: var(--black);
+        }
+        .light-theme .text-body {
+            color: var(--gray-dark);
+        }
+        .light-theme .text-muted {
+            color: var(--gray-medium);
+        }
+        .light-theme .icon-bg {
+            background-color: rgba(255, 102, 0, 0.1);
+        }
+        .light-theme .icon-color {
+            color: var(--primary-orange);
+        }
+        .light-theme .input-field {
+            background-color: var(--white);
+            border-color: #D1D5DB;
+            color: var(--black);
+        }
+        .light-theme .btn-primary {
+            background-color: var(--primary-orange);
+            color: var(--white);
+        }
+        .light-theme .btn-secondary {
+            background-color: var(--white);
+            color: var(--black);
+            border-color: #D1D5DB;
+        }
+        .light-theme .card-hover:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1-px rgba(0, 0, 0, 0.06);
+        }
+        .light-theme .card-content {
+            background-color: var(--white);
+        }
+        .light-theme .tab-content-pane {
+            background-color: #F8F9FA;
+        }
+        .light-theme .recommendation-section {
+            background-color: #FFFAF5;
+            border-left: 4px solid var(--primary-orange);
+        }
+        .light-theme .strength-item {
+            background-color: #E6F3FF;
+            border-left: 4px solid #007BFF;
+            color: #004D8C;
+        }
+        .light-theme .weakness-item {
+            background-color: #FFECE6;
+            border-left: 4px solid #FF6600;
+            color: #CC4D00;
+        }
+        .light-theme .question-item {
+            background-color: var(--white);
+            border-left: 4px solid var(--primary-orange);
+        }
+        
+
+
+        /* Dark Theme */
+        .dark-theme {
+            background-color: var(--black);
+            color: var(--white);
+        }
+        .dark-theme .bg-card {
+            background-color: #2D2D2D;
+        }
+        .dark-theme .text-heading {
+            color: var(--white);
+        }
+        .dark-theme .text-body {
+            color: #C0C0C0;
+        }
+        .dark-theme .text-muted {
+            color: #8C8C8C;
+        }
+        .dark-theme .icon-bg {
+            background-color: rgba(255, 102, 0, 0.15);
+        }
+        .dark-theme .icon-color {
+            color: var(--primary-orange);
+        }
+        .dark-theme .input-field {
+            background-color: #2D2D2D;
+            border-color: #4B5563;
+            color: var(--white);
+        }
+        .dark-theme .btn-primary {
+            background-color: var(--primary-orange);
+            color: var(--white);
+        }
+        .dark-theme .btn-secondary {
+            background-color: var(--black);
+            color: var(--white);
+            border-color: #4B5563;
+        }
+        .dark-theme .card-hover:hover {
+            box-shadow: 0 10px 15px -3-px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+        }
+        .dark-theme .card-content {
+            background-color: #1A1A1A;
+        }
+        .dark-theme .card-details {
+            background-color: #2D2D2D;
+        }
+        .dark-theme .tab-content-pane {
+            background-color: #1A1A1A;
+        }
+        .dark-theme .recommendation-section {
+            background-color: #2D2D2D;
+            border-left: 4px solid var(--primary-orange);
+        }
+        .dark-theme .strength-item {
+            background-color: #333333;
+            border-left: 4px solid #007BFF;
+            color: #C0C0C0;
+        }
+        .dark-theme .weakness-item {
+            background-color: #333333;
+            border-left: 4px solid #FF6600;
+            color: #C0C0C0;
+        }
+        .dark-theme .question-item {
+            background-color: #2D2D2D;
+            border-left: 4px solid var(--primary-orange);
+        }
+
+        /* Common Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: all 0.5s ease-in-out;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .btn-primary, .btn-secondary {
+            border: 1px solid transparent;
+            border-radius: 9999px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-orange-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4-px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .loading-animation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .icon-path {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .animated-icon {
+            font-size: 2.5rem;
+            color: var(--primary-orange);
+            animation: move-icon 4s linear infinite;
+        }
+        .loading-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .recruiter-image {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes move-icon {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .tab-button {
+            padding: 12px 20px;
+            border-bottom: 3px solid transparent;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .tab-button.active {
+            color: var(--primary-orange);
+            border-bottom-color: var(--primary-orange);
+        }
+        .tab-button:hover:not(.active) {
+            color: var(--primary-orange-dark);
+            background-color: rgba(255, 102, 0, 0.05);
+        }
+        .prose {
+            line-height: 1.7;
+        }
+        .prose h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .strength-item, .weakness-item {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .strength-item {
+            background-color: #E6F3FF;
+            border-left: 4px solid #007BFF;
+            color: #004D8C;
+        }
+        .weakness-item {
+            background-color: #FFECE6;
+            border-left: 4px solid #FF6600;
+            color: #CC4D00;
+        }
+        .strength-icon, .weakness-icon {
+            margin-right: 12px;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+        .strength-icon {
+            color: #007BFF;
+        }
+        .weakness-icon {
+            color: #FF6600;
+        }
+        .recommendation-section {
+            background-color: #FFFAF5;
+            border-left: 4px solid var(--primary-orange);
+        }
+        .score-badge-container {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .score-badge {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .ats-score-bg {
+            background: linear-gradient(135deg, #FF9900 0%, #FF6600 100%);
+            color: var(--white);
+        }
+        .hr-score-bg {
+            background: linear-gradient(135deg, #00C853 0%, #008933 100%);
+            color: var(--white);
+        }
+        .question-item {
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--primary-orange);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .match-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .match-clear {
+            background-color: #00C853;
+        }
+        .match-partial {
+            background-color: #FFC107;
+        }
+        .match-none {
+            background-color: #DC3545;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        /* Modal specific styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        .modal-content {
+            background-color: var(--bg-card);
+            padding: 24px;
+            border-radius: 12px;
+            max-width: 400px;
+            text-align: center;
+        }
+        /* Chat widget styles */
+        .chat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+        }
+        .chat-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-orange);
+            color: var(--white);
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .chat-button:hover {
+            transform: scale(1.1);
+        }
+        .chat-popup {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            transform: scale(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-in-out;
+        }
+        .chat-popup.dark-theme {
+            background-color: var(--black);
+        }
+        .chat-popup.show {
+            transform: scale(1);
+        }
+        .chat-header {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-orange);
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            color: var(--white);
+        }
+        .chat-body {
+            flex-grow: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-input {
+            display: flex;
+            padding: 16px;
+            border-top: 1px solid var(--gray-light);
+            background-color: var(--white);
+        }
+        .dark-theme .chat-input {
+            background-color: var(--black);
+        }
+        .dark-theme .chat-input input {
+            background-color: #2D2D2D;
+            border-color: #4B5563;
+            color: var(--white);
+        }
+        .chat-input input {
+            flex-grow: 1;
+            border-radius: 9999px;
+            padding: 8px 16px;
+            border: 1px solid var(--gray-medium);
+        }
+        .chat-input button {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        .message {
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-radius: 12px;
+            max-width: 80%;
+        }
+        .user-message {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            align-self: flex-end;
+            margin-left: auto;
+        }
+        .assistant-message {
+            background-color: var(--gray-light);
+            color: var(--black);
+            align-self: flex-start;
+            margin-right: auto;
+        }
+        .dark-theme .assistant-message {
+            background-color: var(--gray-dark);
+            color: var(--white);
+        }
